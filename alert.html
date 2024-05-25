@@ -2,68 +2,71 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title>내 홈페이지</title>
+    <title>으라차차차</title>
   </head>
   <body>
+    <h1>아무말이나 쓰기</h1>
+    <hr color="purple" size="10">
+    <h2>쓰고 있다구</h2>
 
     <script>
-    //이름 입력하세용
-    let name = prompt("이름 입력: ");
-    //나이 입력하세용
-    let age = prompt("나이를 입력: ");
-    //당신은 학생인가요?
-    //확인 또는 취소
-    let isSt = confirm("당신은 학생?");
-    let st = ""; //임시 변수
-    if (!isSt) {
-      alert("너 누구야");
-    }
-    if (age >= 8 && age <=13) {
-     st= "초등학생";
-    } else if (age >= 8 && age <=13) {
-     st= "중학생";
-    } else if (age >= 14 && age <=16) {
-     st= "고등학생";
-    } else if (age >= 178 && age <=19) {
-     st= "대학생"; (age >= 20) {
-    } else {
-     st= "아기예요~";
-    }
+     alert( 'Hello, world!' );
+     console.log("Hello, world!");
+        
+       let name1 = "도라에몽";  // 변수 선언
+       let admin;   // 변수 선언
+       admin = name1;   // 변수값 복사?? 대입
+       // 안녕 도라에몽을 출력 
+       alert("안녕! " + admin);   // 알림창 출력
+       alert(`안녕! ${admin}`);   // 알림창 출력
+       // 이름 입력하세요
+       let name = prompt("이름 입력: ");
+       // 나이 입력하세요
+       let age = prompt("나이를 입력: ");
+       // 당신은 학생인가요?
+       // 확인 또는 취소
+       let isSt = confirm("너 학생이니??");
+       let st = "";  // 임시 변수
+       if (!isSt) {
+        alert("아나타와 난데스까");
+       }
+       if (age >= 8 && age <= 13) {
+        alert("초등학생");
+        st = "초등학생";
+       } else if (age >= 14 && age <= 16) {
+        st = "중학생";
+       } else if (age >= 17 && age <= 19) {
+        st = "고등학생";
+       } else if (age >= 20) {
+        st = "대학생";
+       } else {
+        st = "아 응애예요~~~~";
+       }
+       
 
-     alert('이름은 ${name} 나이는 ${age}살 ${st}입니다.');
+       alert(`이름은 ${name} 나이는 ${age}살 ${st}입니다.`);
 
+        let result = prompt("나이를 입력: ");
+        alert(`당신의 나이는 ${result}살 입니다.`);
+        // 만약에 15세이상만 입장가능
+        if (result >= 15) {
+         alert("어서오세요~");
+        } else {
+         alert("가세요~");
+        }
+        15세이하는 가라~
 
-
-
-
-
-
-
-
-    let result = prompt ("나이를 입력: ");
-    alert('당신의 나이는 ${result}살 입니다.');
-    //만약에 15세 이상만 입장 가능
-    if (result >= 15) {
-    alert("어서오세요~");
-    } else {
-    alert("가세요~");
-    }
-
-
-
-
-    result= confirm("당신이 주인인가요?");
-
-    // result의 값은? true 또는 false
-    //alert(result);
-    if(result) {//만약에 true면
-    alert("네 주인님~ 어서오세요! 무엇을 도와드릴까요?");
-    } esle { //아니면
-    alert("꺼져~");
-    }
-
-
+        result = confirm("당신이 주인인가요?");
+        // result 의 값은? true 또는 false
+        alert(result);
+        if (result) {  // 만약에 true 이면
+         alert("넹 주인님~ㅎㅎ 커몬커몬 무엇을 도와드릴까요?");
+        } else { // 아니면
+         alert("꺼지거라");
+        }
+       
     </script>
-</body>
-  
+    
+
+  </body>
 </html>
