@@ -12,19 +12,37 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <style>
-     * {
+        * {
             font-family: 'Noto Sans', sans-serif;
             font-weight: 900;
         }
 
-     body {
+        body {
             margin: 0;
             padding: 0;
-            background-image: url('img/배경.png'); /* 배경 이미지 경로 설정 */
-            background-size: cover; /* 화면에 꽉 차도록 이미지 크기 조절 */
-            background-position: center; /* 이미지를 가운데 정렬 */
-            background-repeat: no-repeat; /* 이미지 반복 없음 */
-            color: white; /* 기본 글자색 설정 */
+            background-image: url('img/배경.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            color: white; 
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            padding: 3rem 0; 
+            font-size: 2rem;
+        }
+
+        .hero .container {
+            text-align: center;
+        }
+
+        .hero .display-4 {
+            font-size: 4rem;
+            font-weight: 900; 
+            color: #ffffff;
         }
 
         main {
@@ -33,17 +51,57 @@
             color: #ffffffef;
             text-align: center;
         }
+
         .nav {
+            position: sticky;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
             margin: 1rem 0;
             font-size: 1.5rem;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 1rem;
+            border-radius: 0.5rem 0 0 0.5rem;
         }
+
         .nav-link {
             color: #f8f9fa;
         }
+
         .nav-link.active {
             font-weight: bold;
         }
-      
+
+        main h1 {
+            font-size: 3rem; 
+            font-weight: 700; 
+        }
+
+        main p.lead {
+            font-size: 1.25rem; 
+            font-weight: 400; 
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: stretch;
+        }
+
+        .image-container img {
+            width: 45%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .image-container img.fade-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .right {
+            transform: translateX(50px);
+        }
 
         .card {
             position: relative;
@@ -53,11 +111,13 @@
             cursor: pointer;
             text-decoration: none;
         }
+
         .card-img-top {
             width: 100%;
-            height: 250px; 
+            height: 230px; 
             object-fit: cover;
         }
+
         .card-body {
             position: absolute;
             bottom: 0;
@@ -66,32 +126,38 @@
             background: rgba(0, 0, 0, 0);
             transition: background 0.3s ease;
         }
+
         .card-title {
             color: white;
             font-size: 1.7em;
         }
+
         .card-subtitle {
             display: none;
             color: #f7f7f7;
         }
+
         .card:hover .card-body {
-            background: rgba(0, 0, 0, 0.204);
+            background: rgba(0, 0, 0, 0.115);
         }
+
         .card:hover .card-subtitle {
             display: block;
         }
 
         footer {
             text-align: center;
+            padding: 2rem 0;
+            background-color: rgba(255, 255, 255, 0);
+            color: #000;
             margin-top: auto;
-            padding: 0px 0;
-            background-color: #f8f9fa00;
         }
 
         .text-white {
             color: rgb(255, 255, 255);
             text-decoration: none;
         }
+
         .text-white:hover {
             text-decoration: underline;
         }
@@ -99,165 +165,179 @@
 </head>
 
 <body>
-    <body>
-        <body>
-            <div class="hero d-flex align-items-center justify-content-center" style="background-color: #3333331d;">
-                <div class="container text-center">
-                    <h1 class="display-4 text-light">Under The Sea</h1>
-                </div>
-            </div>
-            
-            <nav class="nav flex-column">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
-              <a class="nav-link" href="#">Link</a>
-              <a class="nav-link" href="#">Link</a>
-            </nav>
+    <div class="hero d-flex align-items-center justify-content-center" style="background-color: #ffffff00;">
+        <div class="container text-center">
+            <h1 class="display-4 text-light">Under The Sea</h1>
+        </div>
+    </div>
 
-            <div style="margin-bottom: 130px;"></div>
+    <nav class="nav flex-column">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Sea creatures</a>
+        <a class="nav-link" href="#">About</a>
+    </nav>
 
-            <main class="px-3">
-              <h1>What kind of creatures live in the deep sea?</h1>
-              <p class="lead">No matter what you imagine, the world will unfold beyond that</p>
-              <p class="lead">
-                <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Let's diving</a>
-              </p>
-            </main>
+    <div style="margin-bottom: 250px;"></div>
+
+    <main class="px-3">
+        <h1>What kind of creatures live in the deep sea?</h1>
+        <p class="lead">No matter what you imagine, the world will unfold beyond that</p>
+        <p class="lead">
+            <a href="#sea-creatures" class="btn btn-lg btn-light fw-bold border-white bg-white">Let's diving</a>
+        </p>
 
 
-            <div style="margin-bottom: 620px;"></div>
-            
-        
-          
-        </body>
+        <div style="margin-bottom: 80px;"></div>
 
+        <div class="image-container">
+            <img id="fadeInImage" src="img/누끼1.png" alt="Right Image" class="right">
+        </div>
 
+    </main>
 
-      
+    <div style="margin-bottom: 300px;"></div>
 
-
-
-
-
-    <div class="container">
+    <div id="sea-creatures" class="container">
         <div class="row">
             <div class="col-md-4">
-              <a href="https://www.youtube.com/watch?v=RM9o4VnfHJU" target="_blank" class="card-link">
-                <div class="card">
-                    <img src="img/Barreleye fish.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Barreleye fish</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">볼록눈 물고기</h6>
+                <a href="https://www.youtube.com/watch?v=RM9o4VnfHJU" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Barreleye fish.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Barreleye fish</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">볼록눈 물고기</h6>
+                        </div>
                     </div>
-                </div>
-              </a>
+                </a>
             </div>
             <div class="col-md-4">
-              <a href="https://www.youtube.com/watch?v=zkBJ-IMtWh8" target="_blank" class="card-link">
-                <div class="card">
-                    <img src="img/Fangtooth.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Fangtooth</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">귀신물고기</h6>
+                <a href="https://www.youtube.com/watch?v=zkBJ-IMtWh8" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Fangtooth.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Fangtooth</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">귀신물고기</h6>
+                        </div>
                     </div>
-                </div>
-              </a>
+                </a>
             </div>
             <div class="col-md-4">
-              <a href="https://www.youtube.com/watch?v=wxGD2lLHeK4&t=1s" target="_blank" class="card-link">
-                <div class="card">
-                    <img src="img/Big red jelly.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Big red jelly</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">큰 붉은 해파리</h6>
+                <a href="https://www.youtube.com/watch?v=wxGD2lLHeK4&t=1s" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Big red jelly.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Big red jelly</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">큰 붉은 해파리</h6>
+                        </div>
                     </div>
-                </div>
-              </a>
+                </a>
             </div>
         </div>
     </div>
-    <div style="margin-bottom: 80px;"></div>
+    <div style="margin-bottom: 40px;"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <a href="https://www.youtube.com/watch?v=0XtadPjMdjE" target="_blank" class="card-link">
-            <div class="card">
-                <img src="img/Silky jelly.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Silky jelly</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">해파리</h6>
-                </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://www.youtube.com/watch?v=0XtadPjMdjE" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Silky jelly.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Silky jelly</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">해파리</h6>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="https://www.youtube.com/watch?v=6luG9mDaGgw" target="_blank" class="card-link">
-            <div class="card">
-                <img src="img/Bloody-belly comb jelly.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Bloody-belly comb jelly</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">핏빛 배 빗 해파리</h6>
-                </div>
+            <div class="col-md-4">
+                <a href="https://www.youtube.com/watch?v=6luG9mDaGgw" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Bloody-belly comb jelly.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Bloody-belly comb jelly</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">핏빛 배 빗 해파리</h6>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="https://www.youtube.com/watch?v=c6GRMV3rHhE" target="_blank" class="card-link">
-            <div class="card">
-                <img src="img/Bubblegum coral.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Bubblegum coral</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">나무측산호</h6>
-                </div>
+            <div class="col-md-4">
+                <a href="https://www.youtube.com/watch?v=c6GRMV3rHhE" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Bubblegum coral.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Bubblegum coral</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">나무측산호</h6>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </a>
         </div>
-  </div>
-  <div style="margin-bottom: 80px;"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <a href="https://www.youtube.com/watch?v=Jp2qV4tI3sE" target="_blank" class="card-link">
-          <div class="card">
-              <img src="img/Angler siphonophore.png" class="card-img-top">
-              <div class="card-body">
-                  <h5 class="card-title">Angler siphonophore</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">아귀 관해파리</h6>
-              </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://www.youtube.com/watch?v=hyq0X3nPR04" target="_blank" class="card-link">
-          <div class="card">
-              <img src="img/Glass squid.png" class="card-img-top">
-              <div class="card-body">
-                  <h5 class="card-title">Glass squid</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">유리 오징어</h6>
-              </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://www.youtube.com/watch?v=RUc-N4IOt4c&t=1s" target="_blank" class="card-link">
-          <div class="card">
-              <img src="img/Deep-sea squid.png" class="card-img-top">
-              <div class="card-body">
-                  <h5 class="card-title">Deep-sea squid</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">심해 오징어</h6>
-              </div>
-          </div>
-        </a>
-      </div>
-    <div style="margin-bottom: 100px;">
-
+    </div>
+    <div style="margin-bottom: 40px;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://www.youtube.com/watch?v=Jp2qV4tI3sE" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Angler siphonophore.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Angler siphonophore</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">아귀 관해파리</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://www.youtube.com/watch?v=hyq0X3nPR04" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Glass squid.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Glass squid</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">유리 오징어</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://www.youtube.com/watch?v=RUc-N4IOt4c&t=1s" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Deep-sea squid.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Deep-sea squid</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">심해 오징어</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
     <footer class="mt-auto text-white-50">
-    <p>By <a href="https://www.instagram.com/idmuhajii" class="text-white">gayoung</a></p>
+        <p>By <a href="https://www.instagram.com/idmuhajii" class="text-white">gayoung</a></p>
     </footer>
-  </div>
-  
-</div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div style="margin-bottom: 10px;"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.image-container img');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    } else {
+                        entry.target.classList.remove('fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            images.forEach(image => {
+                observer.observe(image);
+            });
+
+            document.querySelector('a[href="#Active"]').addEventListener('click', function (event) {
+                event.preventDefault();
+                document.getElementById('Active').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 
 </html>
