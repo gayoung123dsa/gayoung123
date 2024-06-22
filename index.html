@@ -82,6 +82,26 @@
             font-weight: 400; 
         }
 
+
+
+        .submarine-container {
+            text-align: center; 
+            margin-top: 20px; 
+        }
+
+        .submarine {
+            width: 100px; 
+            height: auto; 
+        }
+
+        @media (max-width: 768px) {
+            .submarine {
+                width: 80px; 
+            }
+        }
+
+
+
         .image-container {
             display: flex;
             justify-content: flex-end;
@@ -102,6 +122,8 @@
         .right {
             transform: translateX(50px);
         }
+
+
 
         .card {
             position: relative;
@@ -161,6 +183,17 @@
         .text-white:hover {
             text-decoration: underline;
         }
+
+        .grid-container {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 
@@ -172,8 +205,8 @@
     </div>
 
     <nav class="nav flex-column">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-        <a class="nav-link" href="#">Sea creatures</a>
+        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link" href="page1.html">Sea creatures</a>
         <a class="nav-link" href="#">About</a>
     </nav>
 
@@ -186,8 +219,12 @@
             <a href="#sea-creatures" class="btn btn-lg btn-light fw-bold border-white bg-white">Let's diving</a>
         </p>
 
+        <div class="submarine-container">
+            <img src="img/잠수함.png" alt="Submarine Image" class="submarine">
+        </div>
+        
 
-        <div style="margin-bottom: 80px;"></div>
+        <div style="margin-bottom: 130px;"></div>
 
         <div class="image-container">
             <img id="fadeInImage" src="img/누끼1.png" alt="Right Image" class="right">
@@ -195,11 +232,11 @@
 
     </main>
 
-    <div style="margin-bottom: 300px;"></div>
+    <div style="margin-bottom: 200px;"></div>
 
     <div id="sea-creatures" class="container">
-        <div class="row">
-            <div class="col-md-4">
+      <div class="grid-container">
+        <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=RM9o4VnfHJU" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Barreleye fish.png" class="card-img-top">
@@ -210,7 +247,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=zkBJ-IMtWh8" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Fangtooth.png" class="card-img-top">
@@ -221,7 +258,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=wxGD2lLHeK4&t=1s" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Big red jelly.png" class="card-img-top">
@@ -236,8 +273,8 @@
     </div>
     <div style="margin-bottom: 40px;"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
+      <div class="grid-container">
+        <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=0XtadPjMdjE" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Silky jelly.png" class="card-img-top">
@@ -248,7 +285,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=6luG9mDaGgw" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Bloody-belly comb jelly.png" class="card-img-top">
@@ -259,7 +296,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=c6GRMV3rHhE" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Bubblegum coral.png" class="card-img-top">
@@ -274,8 +311,8 @@
     </div>
     <div style="margin-bottom: 40px;"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
+      <div class="grid-container">
+        <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=Jp2qV4tI3sE" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Angler siphonophore.png" class="card-img-top">
@@ -286,7 +323,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=hyq0X3nPR04" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Glass squid.png" class="card-img-top">
@@ -297,7 +334,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="grid-item">
                 <a href="https://www.youtube.com/watch?v=RUc-N4IOt4c&t=1s" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Deep-sea squid.png" class="card-img-top">
@@ -312,10 +349,13 @@
     </div>
     <footer class="mt-auto text-white-50">
         <p>By <a href="https://www.instagram.com/idmuhajii" class="text-white">gayoung</a></p>
+        <p>ⓒ 2024 MediaContents</p>
     </footer>
     <div style="margin-bottom: 10px;"></div>
 
     <script>
+       
+
         document.addEventListener('DOMContentLoaded', function () {
             const images = document.querySelectorAll('.image-container img');
             const observer = new IntersectionObserver(entries => {
