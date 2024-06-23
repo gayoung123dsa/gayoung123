@@ -27,7 +27,6 @@
             color: white; 
         }
 
-
         main {
             padding: 3rem;
             background: #44444400;
@@ -56,21 +55,19 @@
         }
 
         main h1 {
-            font-size: 3rem; 
-            font-weight: 700; 
+            font-size: 3rem;
+            font-weight: 700;
         }
 
         main p.lead {
-            font-size: 1.25rem; 
-            font-weight: 400; 
+            font-size: 1.25rem;
+            font-weight: 400;
         }
-
 
         .video-container {
             position: relative;
             width: 100%;
             max-width: 1080px;
-            height: 50;
             padding-bottom: 20%;
             margin: auto;
         }
@@ -81,16 +78,48 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: none; 
+            border: none;
         }
+
+
+        .accordion-item {
+            background-color: #44444440; 
+            color: white; 
+        }
+
+        .accordion-button {
+            background-color: #333333; 
+            color: white; 
+            font-size: 1.2rem; 
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #555555; 
+            color: rgb(255, 110, 224); 
+        }
+
+        .accordion-body {
+            font-size: 1rem; 
+            color: #ffffff; 
+        }
+
+        .accordion-header {
+            font-size: 1.5rem; 
+        }
+
+        .accordion {
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+
+
 
         .dropdown {
-            position: relative; /* 상대 위치 지정 */
-            display: inline-block; /* 인라인 블록으로 표시 */
-            margin-top: 20px; /* 위쪽 여백 설정 */
-            margin-left: 307px; /* 왼쪽 여백 설정 */
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 200px;
         }
-
 
         .card {
             position: relative;
@@ -103,7 +132,7 @@
 
         .card-img-top {
             width: 100%;
-            height: 230px; 
+            height: 230px;
             object-fit: cover;
         }
 
@@ -165,63 +194,95 @@
 </head>
 
 <body>
-
-
     <nav class="nav justify-content-center">
-      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-      <a class="nav-link" href="page1.html">Sea Creatures</a>
-      <a class="nav-link" href="page2.html">About</a>
+        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link" href="page1.html">Sea Creatures</a>
+        <a class="nav-link" href="page2.html">About</a>
     </nav>
 
     <div style="margin-bottom: 80px;"></div>
 
     <main class="px-3">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ryRcPeOM1sY?autoplay=1&mute=1" 
+                    title="YouTube video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
 
+        <div style="margin-bottom: 20px;"></div>
 
-
-      
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/ryRcPeOM1sY?autoplay=1&mute=1" 
-                title="YouTube video" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-     </div>
-
-     <div style="margin-bottom: 20px;"></div>
-
-        <h1>10 million to 30 million species</h1>
+        <h1>10 million to 30 million Organisms</h1>
         <p class="lead">An unknown space than the universe</p>
 
+        <div style="margin-bottom: 150px;"></div>
 
-        <div style="margin-bottom: 130px;"></div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        The deep sea
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>The deep sea is broadly defined as the ocean depth where light begins to fade, at an approximate depth of 200 m (660 ft) or the point of transition from continental shelves to continental slopes. Conditions within the deep sea are a combination of low temperatures, darkness, and high pressure. The deep sea is considered the least explored Earth biome as the extreme conditions make the environment difficult to access and explore.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Organisms living within The deep sea
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Organisms living within the deep sea have a variety of adaptations to survive in these conditions. Organisms can survive in the deep sea through a number of feeding methods including scavenging, predation and filtration, with a number of organisms surviving by feeding on marine snow. Marine snow is organic material that has fallen from upper waters into the deep sea.
+
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        The Submarine Challenged the Deepest
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>In 1960, the bathyscaphe Trieste descended to the bottom of the Mariana Trench near Guam, at 10,911 m (35,797 ft; 6.780 mi), the deepest known spot in any ocean. If Mount Everest (8,848 m or 29,029 ft or 5.498 mi) were submerged there, its peak would be more than 2 km (1.2 mi) beneath the surface. After the Trieste was retired, the Japanese remote-operated vehicle (ROV) Kaikō was the only vessel capable of reaching this depth until it was lost at sea in 2003. In May and June 2009, the hybrid-ROV Nereus returned to the Challenger Deep for a series of three dives to depths exceeding 10,900 m (35,800 ft; 6.8 mi).
+                </div>
+            </div>
+        </div>
+
+
+
 
     </main>
 
     <div style="margin-bottom: 200px;"></div>
 
-
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu dropdown-menu-dark">
-        <li><a class="dropdown-item active" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
+        <button id="dropdownMenuButton" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Choose species
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" onclick="filterCards('all', 'Choose type')">Choose type</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" onclick="filterCards('fish', 'Fish')">Fish</a></li>
+            <li><a class="dropdown-item" onclick="filterCards('jelly', 'Jelly')">Jelly</a></li>
+            <li><a class="dropdown-item" onclick="filterCards('squid', 'Squid')">Squid</a></li>
+            <li><a class="dropdown-item" onclick="filterCards('coral', 'Coral')">Coral</a></li>
+        </ul>
     </div>
-
-
 
     <div style="margin-bottom: 30px;"></div>
 
     <div id="sea-creatures" class="container">
-      <div class="grid-container">
-        <div class="grid-item">
-                <a href="https://www.youtube.com/watch?v=RM9o4VnfHJU" target="_blank" class="card-link">
+        <div class="grid-container">
+            <div class="grid-item" data-category="fish">
+                <a href="page3.html" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Barreleye fish.png" class="card-img-top">
                         <div class="card-body">
@@ -231,7 +292,7 @@
                     </div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" data-category="fish">
                 <a href="https://www.youtube.com/watch?v=zkBJ-IMtWh8" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Fangtooth.png" class="card-img-top">
@@ -242,7 +303,7 @@
                     </div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" data-category="jelly">
                 <a href="https://www.youtube.com/watch?v=wxGD2lLHeK4&t=1s" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Big red jelly.png" class="card-img-top">
@@ -253,12 +314,7 @@
                     </div>
                 </a>
             </div>
-        </div>
-    </div>
-    <div style="margin-bottom: 40px;"></div>
-    <div class="container">
-      <div class="grid-container">
-        <div class="grid-item">
+            <div class="grid-item" data-category="jelly">
                 <a href="https://www.youtube.com/watch?v=0XtadPjMdjE" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Silky jelly.png" class="card-img-top">
@@ -269,7 +325,7 @@
                     </div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" data-category="jelly">
                 <a href="https://www.youtube.com/watch?v=6luG9mDaGgw" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Bloody-belly comb jelly.png" class="card-img-top">
@@ -280,7 +336,40 @@
                     </div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" data-category="jelly">
+                <a href="https://www.youtube.com/watch?v=Jp2qV4tI3sE" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Angler siphonophore.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Angler siphonophore</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">아귀 관해파리</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item" data-category="squid">
+                <a href="https://www.youtube.com/watch?v=hyq0X3nPR04" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Glass squid.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Glass squid</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">유리 오징어</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item" data-category="squid">
+                <a href="https://www.youtube.com/watch?v=RUc-N4IOt4c&t=1s" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="img/Deep-sea squid.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Deep-sea squid</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">심해 오징어</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item" data-category="coral">
                 <a href="https://www.youtube.com/watch?v=c6GRMV3rHhE" target="_blank" class="card-link">
                     <div class="card">
                         <img src="img/Bubblegum coral.png" class="card-img-top">
@@ -293,50 +382,25 @@
             </div>
         </div>
     </div>
-    <div style="margin-bottom: 40px;"></div>
-    <div class="container">
-      <div class="grid-container">
-        <div class="grid-item">
-                <a href="https://www.youtube.com/watch?v=Jp2qV4tI3sE" target="_blank" class="card-link">
-                    <div class="card">
-                        <img src="img/Angler siphonophore.png" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Angler siphonophore</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">아귀 관해파리</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.youtube.com/watch?v=hyq0X3nPR04" target="_blank" class="card-link">
-                    <div class="card">
-                        <img src="img/Glass squid.png" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Glass squid</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">유리 오징어</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.youtube.com/watch?v=RUc-N4IOt4c&t=1s" target="_blank" class="card-link">
-                    <div class="card">
-                        <img src="img/Deep-sea squid.png" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Deep-sea squid</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">심해 오징어</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+
     <footer class="mt-auto text-white-50">
         <p>By <a href="https://www.instagram.com/idmuhajii" class="text-white">gayoung</a></p>
         <p>ⓒ 2024 MediaContents</p>
     </footer>
 
-  
+    <script>
+        function filterCards(category, label) {
+            var cards = document.querySelectorAll('.grid-item');
+            cards.forEach(function(card) {
+                if (card.getAttribute('data-category') === category || category === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            document.getElementById('dropdownMenuButton').textContent = label;
+        }
+    </script>
 </body>
 
 </html>
